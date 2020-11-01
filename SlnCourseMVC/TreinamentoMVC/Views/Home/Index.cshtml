@@ -1,0 +1,46 @@
+﻿@model  TreinamentoMVC.Models.Pessoa
+
+@{
+    ViewBag.Title = "Index";
+}
+@*<p>@ViewData["PessoaId"]</p>
+    <p>@ViewData["Nome"]</p>
+    <p>@ViewData["Tipo"]</p><br />
+
+    <p>@ViewBag.Id</p>
+    <p>@ViewBag.nome</p>
+    <p>@ViewBag.tipo</p>*@
+
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
+    <div>
+        <h2>Esta é a página Index</h2>
+        <fieldset>
+            <legend>Informações de Pessoa</legend>
+
+            <div>
+                @Html.LabelFor(x => x.PessoaId)
+            </div>
+            <div>
+                @Html.EditorFor(x => x.PessoaId)
+            </div>
+            <div>
+                @Html.LabelFor(x => x.Nome)
+            </div>
+            <div>
+                @Html.EditorFor(x => x.Nome)
+            </div>
+            <div>
+                @Html.LabelFor(x => x.Tipo)
+            </div>
+            <div>
+                @Html.EditorFor(x => x.Tipo)
+            </div>
+            <p><input type="submit" value="Enviar" /></p>
+        </fieldset>
+    </div>
+
+}
+
+
+

@@ -1,0 +1,16 @@
+﻿@model WebRotasMVC.Models.Noticia
+
+@{
+    ViewBag.Title = "MostrarNoticia";
+}
+
+<h2>MostrarNoticia</h2>
+
+<em>
+    @Model.Data - @Html.ActionLink(Model.Categoria, "MostrarCategoria", "Home", new
+    {
+@categoria = Model.Categoria
+    }, null)
+</em>
+
+<div>@Model.Conteudo</div>
